@@ -14,15 +14,18 @@
     <section class="search">
         <div class="field">
             <label for="poke-id">Type the ID or name of Pokemon</label>
+            <br/>
             <input type="text" name="poke-id" id="poke-id" />
         </div>
+        <br/>
         <div class="btn">
         <button type="button" id="run">Search</button>
         </div>
     </section>
+    <br/>
     <section class="output">
         <div class="datas">
-            <img src="#" id="creature" alt=" " title="pokemon"/>
+            <img src="images/pokemon_main.jpg" width="100px" id="creature" alt=" " title="pokemon"/>
             <h1>ID</h1>
             <h2>NAME</h2>
             <div class="moves">
@@ -32,8 +35,13 @@
                 <p class="move4">move4</p>
             </div>
             <div class="evolution">
-                <p>Previous evolution</p>
-                <img src="#" alt=" " title="pokemon"/>
+                <h2>Evolution</h2>
+                <img src="images/kvadrat.jpg" id="evolpic" width="100px" alt=" " title="pokemon"/>
+                <h3>Name</h3>
+                <div class="btn-np">
+                    <button type="button" id="previous">Previous</button>
+                    <button type="button" id="next">Next</button>
+                    </div>
             </div>
         </div>
     </section>
