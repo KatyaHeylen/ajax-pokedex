@@ -89,10 +89,6 @@ document.querySelector("button.reset").addEventListener("click",  () => {
 })
 
 
-// for (let i = 0; i < dataEvol.length; i++) {
-                        //     let evolForms = evolForms.map((dataEvol) => {
-                        //         dataEvol.chain.evolves_to[i].evolves_to[i].evolves_to[i].species.name
-
 
 
 
