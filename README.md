@@ -1,3 +1,5 @@
 # ajax-pokedex
 JSON datas fetching
-Small pokedex
+
+Welcome to my Small cute pokedex!
+https://katyaheylen.github.io/ajax-pokedex/
