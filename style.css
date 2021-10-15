@@ -53,37 +53,51 @@ h1 {
   }
 h2 {
   position: absolute;
+  width: fit-content;
   color: gainsboro;
   margin-top: -130px;
-  margin-left: 600px;
+  margin-left: 580px;
 }
 h3{
   position: absolute;
+  width: 150px;
   margin-left: 670px;
   margin-top: 150px;
   color: gainsboro;
+  font-size: 17px;
 }
-
+.moves {
+  width: 400px;
+  z-index: 2;
+  padding-right: 0;
+}
+span {
+  width: fit-content;
+}
 .move1 {
   position: absolute;
+  width: 150px;
   margin-left: 540px;
   margin-top: -35px;
   font-size: 12px;
 }
 .move2 {
   position: absolute;
+  width: 150px;
   margin-left: 670px;
   margin-top: -35px;
   font-size: 12px;
 }
 .move3 {
   position: absolute;
+  width: 150px;
   margin-left: 540px;
   margin-top: 5px;
   font-size: 12px;
 }
 .move4 {
   position: absolute;
+  width: 150px;
   margin-left: 670px;
   margin-top: 5px;
   font-size: 12px;

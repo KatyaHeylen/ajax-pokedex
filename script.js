@@ -25,13 +25,13 @@ const getData = async (id) => {
                 let order = document.querySelector("h1");
                 order.textContent = data.id;
                 if (data.moves.length > 4) {
-                    let move1 = document.querySelector("p.move1");
+                    let move1 = document.querySelector("span.move1");
                     move1.textContent = data.moves[0].move.name;
-                    let move2 = document.querySelector("p.move2");
+                    let move2 = document.querySelector("span.move2");
                     move2.textContent = data.moves[1].move.name;
-                    let move3 = document.querySelector("p.move3");
+                    let move3 = document.querySelector("span.move3");
                     move3.textContent = data.moves[2].move.name;
-                    let move4 = document.querySelector("p.move4");
+                    let move4 = document.querySelector("span.move4");
                     move4.textContent = data.moves[3].move.name;
                 }
             })
@@ -59,20 +59,27 @@ const getEvolpic = async (evolName) => {
         let x = document.getElementById("poke-id").value;
         getLink(x)
             .then((linkChain) => {
+                console.log(linkChain);
                 let link = linkChain.evolution_chain.url;
                 //get the data to have name of prev. evolution
                 getEvol(link)
                     .then((dataEvol) => {
                         console.log(dataEvol);
                         let evolName = document.querySelector('h3');
-                        evolName.textContent = dataEvol.chain.evolves_to[0].species.name;
-                        console.log(evolName);
+                        evolName.textContent = dataEvol.chain.species.name;
                         getEvolpic(evolName)
                             .then((evolPic) => {
-                                console.log(evolPic);
-                                let img = document.getElementById("evolpic");
-                                img.setAttribute("src", evolPic.sprites.front_default);
 
+                                let name = document.querySelector("h2").innerText;
+                                if (evolName.innerText === name) {
+                                    let img1 = document.getElementById("evolpic");
+                                    img1.setAttribute("src", "images/cross.png");
+                                    document.querySelector("h3").innerText = "no evolution";
+                                }
+                                else {
+                                    let img = document.getElementById("evolpic");
+                                    img.setAttribute("src", evolPic.sprites.front_default);
+                                }
                             })
                     })
             })
