@@ -60,22 +60,26 @@ const getEvolpic = async (evolName) => {
         getLink(x)
             .then((linkChain) => {
                 let link = linkChain.evolution_chain.url;
-
                 //get the data to have name of prev. evolution
                 getEvol(link)
                     .then((dataEvol) => {
                         console.log(dataEvol);
                         let evolName = document.querySelector('h3');
                         evolName.textContent = dataEvol.chain.evolves_to[0].species.name;
+                        console.log(evolName);
                         getEvolpic(evolName)
                             .then((evolPic) => {
                                 console.log(evolPic);
-                                let pic = document.getElementById("evolpic");
-                                pic.setAttribute("scr", evolPic.sprites.front_default);
+                                let img = document.getElementById("evolpic");
+                                img.setAttribute("src", evolPic.sprites.front_default);
+
                             })
                     })
             })
-    })
+        })
+document.querySelector("button.reset").addEventListener("click",  () => {
+    location.reload();
+})
 
 
 // for (let i = 0; i < dataEvol.length; i++) {
