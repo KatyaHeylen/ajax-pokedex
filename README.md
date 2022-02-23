@@ -9,7 +9,7 @@ Objectives were to work with:
 
 Basic functionality that was expected in Pokedex (read: core features):
 
-1 You can search a pokémon by name and by ID
+1. You can search a pokémon by name and by ID
 
 2. Of said pokémon was needed to show:
 - The ID-number
