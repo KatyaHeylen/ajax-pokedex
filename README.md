@@ -11,11 +11,11 @@ Basic functionality that was expected in Pokedex (read: core features):
 
 1. You can search a pokémon by name and by ID
 
-2. Of said pokémon was needed to show:
-- The ID-number
-- An image (sprite)
-- At least 4 "moves"
-- The previous evolution, only if it exists, along with their name and image. 
+2. Of said pokémon was needed to show:  
+    - The ID-number
+    - An image (sprite)
+    - At least 4 "moves"
+    - The previous evolution, only if it exists, along with their name and image. 
 
 Welcome to my Small cute pokedex! Find your favourite Pokemon!
 https://katyaheylen.github.io/ajax-pokedex/
